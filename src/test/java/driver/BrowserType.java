@@ -3,8 +3,7 @@ package driver;
 public enum BrowserType {
 
     FIREFOX("firefox"),
-    CHROME("chrome"),
-    IE("internetexplorer");
+    CHROME("chrome");
 
     private final String browser;
 
