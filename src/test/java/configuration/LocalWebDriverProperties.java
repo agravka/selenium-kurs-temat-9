@@ -10,7 +10,4 @@ public class LocalWebDriverProperties {
         return ConfigurationProperties.getProperties().getProperty("firefox.driver.location");
     }
 
-    public static String getInternetExplorerWebDriverLocation() {
-        return ConfigurationProperties.getProperties().getProperty("ie.driver.location");
     }
-}
