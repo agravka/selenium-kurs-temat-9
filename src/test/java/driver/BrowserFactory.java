@@ -54,12 +54,7 @@ public class BrowserFactory {
                     FirefoxOptions firefoxOptions = new FirefoxOptions();
                     desiredCapabilities.merge(firefoxOptions);
                     return getRemoteWebDriver(desiredCapabilities);
-                case IE:
-
-                    //Do wyboru przeglądarki InternetExplorer używamy klasy InternetExplorerOptions
-                    InternetExplorerOptions internetExplorerOptions = new InternetExplorerOptions();
-                    desiredCapabilities.merge(internetExplorerOptions);
-                    return getRemoteWebDriver(desiredCapabilities);
+                
                 default:
                     throw new IllegalStateException(MESSAGE_UNKNOWN_BROWSER);
             }
@@ -75,9 +70,7 @@ public class BrowserFactory {
                 case FIREFOX:
                     System.setProperty("webdriver.gecko.driver", LocalWebDriverProperties.getFirefoxWebDriverLocation());
                     return new FirefoxDriver();
-                case IE:
-                    System.setProperty("webdriver.ie.driver", LocalWebDriverProperties.getInternetExplorerWebDriverLocation());
-                    return new InternetExplorerDriver();
+                
                 default:
                     throw new IllegalStateException(MESSAGE_UNKNOWN_BROWSER);
             }
