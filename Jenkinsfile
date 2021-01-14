@@ -3,7 +3,7 @@ pipeline {
     stages {
         stage('Build test code') {
             steps {
-                sh 'mvn clean install -D skipTests' // Budowanie testów
+                sh 'mvn clean install -DskipTests' // Budowanie testów
             }
         }
         stage('Run selenium grid') {
